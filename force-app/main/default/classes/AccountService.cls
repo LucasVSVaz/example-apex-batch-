@@ -2,6 +2,7 @@ public with sharing class AccountService {
 
     public static void deleteAccounts(Set<Id> acctIds){
 
+        //forçando o erro DMLs
         List<Account> toDelete = [
                             SELECT Id 
                             FROM Account 
