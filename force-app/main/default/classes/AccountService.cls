@@ -12,15 +12,6 @@ public with sharing class AccountService {
             delete acct;
         }                    
 
-        /*if (!toDelete.isEmpty()) {
-            try {
-                Database.delete(toDelete);
-                System.debug('Deu bom. Contas deletadas.');
-            } catch (DMLException ex) {
-                System.debug('Error - ' + ex.getMessage());
-            }
-        } else {
-            System.debug('Nenhuma conta encontrada para deletar.');
-        }*/
+
     }
 }
