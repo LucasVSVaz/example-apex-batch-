@@ -2,7 +2,7 @@ public with sharing class ScheduleAccountBatch{
 
     public static void scheduleBatch() {
 
-        Integer minutesFromNow = null;
+        Integer minutesFromNow = 1;
         AccountBatch batch = new AccountBatch();
 
         String jobId = System.scheduleBatch(batch, 'Descrição do Batch', minutesFromNow);

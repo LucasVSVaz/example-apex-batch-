@@ -7,7 +7,11 @@ public with sharing class AccountService {
                             FROM Account 
                             WHERE Id IN :acctIds];
 
-        if (!toDelete.isEmpty()) {
+        for(Account acct : toDelete){
+            delete acct;
+        }                    
+
+        /*if (!toDelete.isEmpty()) {
             try {
                 Database.delete(toDelete);
                 System.debug('Deu bom. Contas deletadas.');
@@ -16,6 +20,6 @@ public with sharing class AccountService {
             }
         } else {
             System.debug('Nenhuma conta encontrada para deletar.');
-        }
+        }*/
     }
 }
